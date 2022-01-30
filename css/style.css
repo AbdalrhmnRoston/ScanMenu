@@ -70,11 +70,11 @@
         flex-direction: column;
         gap: 30px;
         position: relative;
-        transition: var(--slow-transition);
-        -webkit-transition: var(--slow-transition);
-        -moz-transition: var(--slow-transition);
-        -ms-transition: var(--slow-transition);
-        -o-transition: var(--slow-transition);
+        transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
     }
 
     
