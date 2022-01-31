@@ -143,9 +143,7 @@ myrecust.send();
         order[random].price = el.parentElement.children[2].children[1].innerHTML;
 
         window.localStorage.setItem('Orders', JSON.stringify(order));
-
-        console.log(JSON.parse(myrecust.responseText));
-        console.log(el.parentElement.parentElement.parentElement.getAttribute('data-section'));
+        addToInvoesPage(order, random);
     }
 
     function getSize(e) {
@@ -202,6 +200,31 @@ myrecust.send();
     getOrders();
 
 
+    function addToInvoesPage(order, random) {
+        let sectionInvo = document.querySelector('.invoice');
+        
+
+        let item = document.createElement('div');
+        item.className = 'item-order';
+        sectionInvo.appendChild(item);
+        let name = document.createElement('div');
+        name.innerHTML = order[random].name;
+        item.appendChild(name);
+        let size = document.createElement('div');
+        size.className = 'size';
+        size.innerHTML = order[random].size;
+        item.appendChild(size);
+        let price = document.createElement('div');
+        price.className = 'price';
+        price.innerHTML = order[random].price;
+        item.appendChild(price);
+        let icon = document.createElement('i');
+        icon.classList.add('far');
+        icon.classList.add('fa-trash-alt');
+        icon.classList.add('remove');
+        item.style.order = '1';
+        item.appendChild(icon);
+    }
 
 
 
