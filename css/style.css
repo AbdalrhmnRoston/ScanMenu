@@ -365,6 +365,7 @@
 
     section.invoice {
         padding: 10px;
+        padding-bottom: 50px;
         margin: 20px 0;
         text-align: center;
         border-bottom: none;
@@ -478,6 +479,20 @@
         -moz-transition: var(--speed-transition);
         -ms-transition: var(--speed-transition);
         -o-transition: var(--speed-transition);
+    }
+
+    section .totale {
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--text-color);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translatex(-50%);
+        -webkit-transform: translatex(-50%);
+        -moz-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+        -o-transform: translatex(-50%);
 }
 
     section .item-order i.remove:hover {
